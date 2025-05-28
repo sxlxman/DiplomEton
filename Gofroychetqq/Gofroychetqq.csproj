@@ -116,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="RawMaterialsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -123,6 +127,16 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsWindow.xaml.cs">
+      <DependentUpon>RawMaterialsWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="EditMaterialWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="EditMaterialWindow.xaml.cs">
+      <DependentUpon>EditMaterialWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

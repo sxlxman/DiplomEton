@@ -52,5 +52,17 @@ namespace Gofroychetqq
             }
         }
         public MainWindow() : this(null) { }
+
+        private void RawMaterialsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new RawMaterialsWindow();
+            window.Owner = this;
+            window.ShowDialog();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
