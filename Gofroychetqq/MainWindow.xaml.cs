@@ -28,6 +28,10 @@ namespace Gofroychetqq
             if (_currentUser != null && _currentUser.Role != null)
             {
                 UserInfoText.Text = $"Пользователь: {_currentUser.Surname} {_currentUser.Name} {_currentUser.Patronymic} | Роль: {_currentUser.Role.Name}";
+                if (_currentUser.RoleID == 1)
+                {
+                    ManageAccountsButton.Visibility = Visibility.Visible;
+                }
             }
             else if (_currentUser != null)
             {
@@ -63,6 +67,13 @@ namespace Gofroychetqq
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void ManageAccountsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new ManageAccountsWindow();
+            window.Owner = this;
+            window.ShowDialog();
         }
     }
 }
